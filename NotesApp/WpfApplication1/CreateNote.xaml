@@ -1,0 +1,56 @@
+﻿<Window x:Class="AppWindowsWPF.CreateNote"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppWindowsWPF"
+        xmlns:converter="clr-namespace:AppWindowsWPF.Converter"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded">
+
+   
+    <Window.Resources>
+        <converter:DateTimeConverter x:Key="dateConverter"/>
+        <converter:CategoryConverter x:Key="categoryConverter"/>
+        <converter:ImageSourceConverter x:Key="imageSourceConverter"/>
+        <RoutedUICommand x:Key="Enter" />
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Enter}" 
+                    Executed="Validate" />
+    </Window.CommandBindings>
+
+    <Window.InputBindings>
+        <KeyBinding Key="Return" Command="{StaticResource Enter}" />
+    </Window.InputBindings>
+    <StackPanel Orientation="Vertical" Height="Auto" Width="Auto">
+        <StackPanel Orientation="Horizontal" Margin="10" Width="Auto" HorizontalAlignment="Center">
+            <Viewbox>
+                <TextBox Width="500" Text="Mon Titre" Style="{StaticResource TitleBox}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" TextChanged="TextBox_TextChanged" >
+                </TextBox>
+            </Viewbox>
+             </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10" Width="Auto">
+            <Label Width="Auto">Commentaire :</Label>
+            <ScrollViewer>
+                <TextBox Name="TextBoxCommentary" Height="100" Width="500" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Justify" TextChanged="TextBoxCommentary_TextChanged"></TextBox>
+            </ScrollViewer>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10" Width="Auto">
+            <Label Width="Auto">Catégorie :</Label>
+            <ComboBox Name="listCategory" Width="Auto" VerticalAlignment="Center" SelectionChanged="listCategory_SelectionChanged" ></ComboBox>
+            <Button Width="auto" Height="auto" Click="Button_Click_Add_Category">+</Button>
+        </StackPanel>
+        <StackPanel Width="Auto" Orientation="Horizontal" Margin="10">
+            <Label Width="Auto">Date de Création :</Label>
+            <TextBlock Name="CreationDate" Width="Auto" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Justify"></TextBlock>
+        </StackPanel>
+        <StackPanel Width="Auto" Orientation="Horizontal" Margin="10">
+            <Label Width="Auto">A faire pour le :</Label>
+            <DatePicker Width="Auto" SelectedDateChanged="DatePicker_SelectedDateChanged" Name="DatePickerToDoForDate" VerticalAlignment="Center"></DatePicker>
+        </StackPanel>
+        <Button Click="Validate">Valider</Button>
+    </StackPanel>
+</Window>

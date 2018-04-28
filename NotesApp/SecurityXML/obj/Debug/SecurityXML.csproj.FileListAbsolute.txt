@@ -1,0 +1,5 @@
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\SecurityXML\bin\Debug\SecurityXML.dll
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\SecurityXML\bin\Debug\SecurityXML.pdb
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\SecurityXML\obj\Debug\SecurityXML.dll
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\SecurityXML\obj\Debug\SecurityXML.pdb
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\SecurityXML\obj\Debug\SecurityXML.csprojResolveAssemblyReference.cache

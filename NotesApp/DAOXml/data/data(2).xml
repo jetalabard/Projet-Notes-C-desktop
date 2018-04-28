@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user>
+    <ID>1</ID>
+    <Name>Name</Name>
+    <Password>password</Password>
+    <items>
+      <item>
+        <ID>1</ID>
+        <Title>Si plusieurs initialiseurs d'objet </Title>
+        <Commentary>Si plusieurs initialiseurs d'objet dans un assembly spécifient une séquence de propriétés dans le même ordre et qui sont du même type et portent le même nom, le compilateur traite les objets comme des instances du même type. Elles partagent les mêmes informations de type générées par le compilateur.</Commentary>
+        <Category>
+          <ID>1</ID>
+          <Title>Categrie 1</Title>
+        </Category>
+        <CreationDate>12/12/2016</CreationDate>
+        <ToDoFor>22/12/2016</ToDoFor>
+      </item>
+      <item>
+        <ID>2</ID>
+        <Title>Item 2</Title>
+        <Commentary>Vous pouvez créer un tableau d'éléments typés anonymement en associant une variable locale implicitement typée et un tableau typé implicitement, comme indiqué dans l'exemple suivant.</Commentary>
+        <Category>
+          <ID>1</ID>
+          <Title>Categrie 1</Title>
+        </Category>
+        <CreationDate>12/12/2016</CreationDate>
+        <ToDoFor>22/12/2016</ToDoFor>
+      </item>
+    </items>
+  </user>
+</users>

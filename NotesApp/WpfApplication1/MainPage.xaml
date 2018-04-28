@@ -1,0 +1,63 @@
+﻿<Window x:Class="AppWindowsWPF.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppWindowsWPF"
+        xmlns:converter="clr-namespace:AppWindowsWPF.Converter"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Icon="notesLogo.ico"
+        Loaded="Loading"
+        Name="MainWindow">
+    <Window.Resources>
+        <converter:DateTimeConverter x:Key="dateConverter"/>
+        <converter:CategoryConverter x:Key="categoryConverter"/>
+        <converter:ImageSourceConverter x:Key="imageSourceConverter"/>
+        <DataTemplate x:Key="templateNote">
+                <local:NotesUC Title="{Binding Title}" 
+                           Commentary="{Binding Commentary}"
+                           Category="{Binding Type, Converter={StaticResource categoryConverter}}"
+                           Date="{Binding ToDoForDate, Converter={StaticResource dateConverter}}">
+
+                </local:NotesUC>
+        </DataTemplate>
+        <DataTemplate x:Key="templateButton">
+            <local:ButtonUC ButtonName="{Binding ButtonName}"
+                            Source="{Binding Source}">
+            </local:ButtonUC>
+        </DataTemplate>
+    </Window.Resources>
+    
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Label Margin="5">Selectionné par Catégorie</Label>
+            <ComboBox Name="mListBoxCategories" SelectionChanged="mListBoxCategories_SelectionChanged" Width="200" Foreground="Black" Margin="5"/>
+            <Button Click="AddNote">
+                <Image Source="images/add.png" Width="20" Height="20" Margin="5" ></Image>
+            </Button>
+            <Button Click="Profil" >
+                <Image Source="images/profile-icon-9.png" Width="20" Height="20" Margin="5" ></Image>
+            </Button>
+        </ToolBar>
+        <ScrollViewer DockPanel.Dock="Left"> 
+        <WrapPanel Margin="10" DockPanel.Dock="Right" Orientation="Horizontal">
+                <ItemsControl Name="listNotes" ItemTemplate="{StaticResource templateNote}" ItemsSource="{Binding}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel  />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+                <Separator Width="5000" Background="DodgerBlue" Margin="20"/>
+                <ItemsControl Name="listButton" ItemTemplate="{StaticResource templateButton}" ItemsSource="{Binding}" >
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </WrapPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

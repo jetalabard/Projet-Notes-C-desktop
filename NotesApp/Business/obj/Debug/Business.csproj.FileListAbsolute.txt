@@ -1,0 +1,9 @@
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\bin\Debug\Business.dll
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\bin\Debug\Business.pdb
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\obj\Debug\Business.dll
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\obj\Debug\Business.pdb
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Business\bin\Debug\Business.dll
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Business\bin\Debug\Business.pdb
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Business\obj\Debug\Business.dll
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Business\obj\Debug\Business.pdb
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache

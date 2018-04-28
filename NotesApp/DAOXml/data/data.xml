@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user>
+    <ID>1</ID>
+    <Name>Name</Name>
+    <Password>0000</Password>
+    <items />
+  </user>
+  <user>
+    <ID>0</ID>
+    <Name>4</Name>
+    <Password>5</Password>
+    <items>
+      <item>
+        <ID>4</ID>
+        <Title>quiche loraine</Title>
+        <Commentary>Recette</Commentary>
+        <Category>
+          <ID>2</ID>
+          <Title>cuisine</Title>
+        </Category>
+        <CreationDate>2017-01-27T00:00:00+01:00</CreationDate>
+        <ToDoFor>2017-01-28T00:00:00</ToDoFor>
+      </item>
+      <item>
+        <ID>0</ID>
+        <Title>Finir jeu Unity</Title>
+        <Commentary>ça me saoule mais faut le finir</Commentary>
+        <Category>
+          <ID>0</ID>
+          <Title>Unity</Title>
+        </Category>
+        <CreationDate>2017-01-27T00:00:00+01:00</CreationDate>
+        <ToDoFor>2017-01-29T00:00:00</ToDoFor>
+      </item>
+    </items>
+  </user>
+</users>

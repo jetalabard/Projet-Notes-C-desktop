@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="AppWindowsWPF.CreateUserUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AppWindowsWPF"
+             mc:Ignorable="d" 
+             Loaded="Loading"
+             d:DesignHeight="370" d:DesignWidth="400">
+    <UserControl.Resources>
+        <RoutedUICommand x:Key="Validate" Text="Text" />
+    </UserControl.Resources>
+
+    <UserControl.CommandBindings>
+        <CommandBinding Command="{StaticResource Validate}" 
+                    Executed="Validation_Click" />
+    </UserControl.CommandBindings>
+
+    <UserControl.InputBindings>
+        <KeyBinding Key="Return" Command="{StaticResource Validate}" />
+    </UserControl.InputBindings>
+
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Left" Grid.Column="0" VerticalAlignment="Top" Width="30" Height="30" Source="images/Arrows-Left-icon.png" MouseDown="ClickToReturnHome" MouseEnter="MouseEnterButtonToReturnHome" MouseLeave="MouseLeaveButtonToReturnHome"></Image>
+            <Viewbox HorizontalAlignment="Center" Grid.Column="2">
+                <Image Source="images/notesLogo.png"  Margin="1" Width="60" Height="50" />
+            </Viewbox>
+            <TextBlock Grid.Column="3" Text="Profil" Margin="2" Style="{StaticResource Title}" />   
+        </Grid>
+        <Label Margin="3" Grid.Column="0" Grid.Row="0" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" >Nom</Label>
+        <TextBox  Margin="3" Grid.Column="1" Grid.Row="0" Name="TextName" VerticalContentAlignment="Center" VerticalAlignment="Center" TextChanged="Name_changed" HorizontalAlignment="Center" Width="157"></TextBox>
+        <Label Margin="3" Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center">Mot de passe</Label>
+        <PasswordBox  Margin="3" Grid.Column="1" Grid.Row="1" Name="TextPassword" VerticalContentAlignment="Center" VerticalAlignment="Center" PasswordChanged="PassWord_changed" HorizontalAlignment="Center" Width="157"></PasswordBox>
+        <Label Margin="3" Grid.Column="0" Grid.Row="2" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center">Confirmation de mot de passe</Label>
+        <PasswordBox  Margin="3" Grid.Column="1" Grid.Row="2" Name="TextPassword1" VerticalContentAlignment="Center" VerticalAlignment="Center" PasswordChanged="PassWord_changed" HorizontalAlignment="Center" Width="157"></PasswordBox>
+        <TextBlock Margin="3" Grid.Column="0" Grid.Row="1" Name="Error" Width="250" Foreground="Red" VerticalAlignment="Top" HorizontalAlignment="Center" ></TextBlock>
+        <Button Grid.Row="2" Content="Création du profil" Margin="5" Command="{StaticResource Validate}" Click="Validation_Click" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="AppWindowsWPF.ButtonUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AppWindowsWPF"
+             xmlns:converter="clr-namespace:AppWindowsWPF.Converter"
+             mc:Ignorable="d" 
+             Name="root">
+    <Border CornerRadius="6" BorderBrush="DodgerBlue" Background="White" BorderThickness="3" Margin="10" MouseEnter="Mouse_Enter" MouseLeave="Mouse_Leave" MouseDown="Button_Click">
+        <WrapPanel Focusable="True" VerticalAlignment="Center" Height="Auto" Margin="10">
+            <WrapPanel.Resources>
+                <converter:ImageSourceConverter x:Key="imageSourceConverter"/>
+            </WrapPanel.Resources>
+                <Image
+                       Source="{Binding Source, Converter={StaticResource imageSourceConverter}, 
+                    ConverterParameter=add.png, ElementName=root, FallbackValue=images/add.png}"
+                        Margin="1" Width="100" Height="75"/>
+            <TextBlock VerticalAlignment="Center" Height="Auto" Width="Auto" Text="{Binding ButtonName, FallbackValue=Déconnexion}" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" />
+        </WrapPanel>
+    </Border>
+</UserControl>

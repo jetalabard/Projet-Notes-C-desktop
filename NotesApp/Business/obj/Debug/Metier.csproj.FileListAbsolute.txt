@@ -1,0 +1,5 @@
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\bin\Debug\Metier.dll
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\bin\Debug\Metier.pdb
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\obj\Debug\Metier.csprojResolveAssemblyReference.cache
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\obj\Debug\Metier.dll
+C:\Users\jerem\OneDrive\Documents\Visual Studio 2015\Projects\Solution1\Metier\obj\Debug\Metier.pdb

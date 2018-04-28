@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:build="http://schemas.microsoft.com/developer/appx/2012/build" IgnorableNamespaces="build">
+  <!--
+    LE FICHIER MANIFESTE DE CE PACKAGE A ÉTÉ GÉNÉRÉ PAR LE PROCESSUS DE GÉNÉRATION.
+
+    Les modifications apportées à ce fichier seront perdues lors de la régénération. Pour corriger les erreurs présentes dans ce fichier, modifiez le fichier source .appxmanifest.
+
+    Pour plus d'informations sur les fichiers manifeste, consultez http://go.microsoft.com/fwlink/?LinkID=241727
+  -->
+  <Identity Name="c728bab9-c163-40f2-ae29-acd429d75bc1" Publisher="CN=jerem" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <mp:PhoneIdentity PhoneProductId="c728bab9-c163-40f2-ae29-acd429d75bc1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>App1</DisplayName>
+    <PublisherDisplayName>jerem</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="FR-FR" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="AppWindowsPhone.exe" EntryPoint="NotesApp.App">
+      <m3:VisualElements DisplayName="NotesApp" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Application pour gérer des notes" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+          <m3:Rotation Preference="landscape" />
+          <m3:Rotation Preference="landscapeFlipped" />
+        </m3:InitialRotationPreference>
+      </m3:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+  </Capabilities>
+  <build:Metadata>
+    <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1" />
+    <build:Item Name="VisualStudio" Version="14.0" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2015" />
+    <build:Item Name="OperatingSystem" Version="10.0.14393.0 (rs1_release.160715-1616)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.25424.0" />
+    <build:Item Name="ProjectGUID" Value="{3A386171-0217-4F5F-89EA-A595DC1F9BDE}" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.81.Build.Tasks.dll" Version="14.0.22705.1" />
+    <build:Item Name="MakePri.exe" Version="6.3.9600.17336 (winblue.150226-1500)" />
+  </build:Metadata>
+</Package>
